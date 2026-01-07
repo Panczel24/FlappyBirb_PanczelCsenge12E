@@ -20,5 +20,15 @@ namespace FlappyBirb_PánczélCsenge12E
         {
             InitializeComponent();
         }
+
+        private void szintekButton_Click(object sender, RoutedEventArgs e)
+        {
+            szintekButton.Visibility = Visibility.Hidden;
+            szintekButton.Visibility = Visibility.Hidden;
+            simaButton.Visibility = Visibility.Visible;
+            esosButton.Visibility = Visibility.Visible;
+            kodosButton.Visibility = Visibility.Visible;
+            VisszaMainButton.Visibility = Visibility.Visible;
+        }
     }
 }
