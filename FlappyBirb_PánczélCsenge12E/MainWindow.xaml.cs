@@ -16,19 +16,65 @@ namespace FlappyBirb_PánczélCsenge12E
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
+       
+
         private void szintekButton_Click(object sender, RoutedEventArgs e)
         {
             szintekButton.Visibility = Visibility.Hidden;
-            szintekButton.Visibility = Visibility.Hidden;
+            eredmenyekButton.Visibility = Visibility.Hidden;
             simaButton.Visibility = Visibility.Visible;
             esosButton.Visibility = Visibility.Visible;
             kodosButton.Visibility = Visibility.Visible;
             VisszaMainButton.Visibility = Visibility.Visible;
+            ScoreTextblock.Visibility = Visibility.Hidden;
+            VisszaAFőmenübe.Visibility = Visibility.Hidden;
+            flappyBird.Visibility = Visibility.Visible;
+        }
+
+        private void VisszaMainButton_Click(object sender, RoutedEventArgs e)
+        {
+            szintekButton.Visibility = Visibility.Visible;
+            eredmenyekButton.Visibility = Visibility.Visible;
+            simaButton.Visibility = Visibility.Hidden;
+            esosButton.Visibility = Visibility.Hidden;
+            kodosButton.Visibility = Visibility.Hidden;
+            VisszaMainButton.Visibility = Visibility.Hidden;
+            ScoreTextblock.Visibility = Visibility. Hidden;
+            VisszaAFőmenübe.Visibility = Visibility.Hidden;
+            flappyBird.Visibility = Visibility.Visible;
+            scoreText.Visibility = Visibility.Visible;
+        }
+
+        private void VisszaAFőmenübe_Click(object sender, RoutedEventArgs e)
+        {
+            szintekButton.Visibility = Visibility.Visible;
+            eredmenyekButton.Visibility = Visibility.Visible;
+            simaButton.Visibility = Visibility.Hidden;
+            esosButton.Visibility = Visibility.Hidden;
+            kodosButton.Visibility = Visibility.Hidden;
+            VisszaMainButton.Visibility = Visibility.Hidden;
+            ScoreTextblock.Visibility = Visibility.Hidden;
+            VisszaAFőmenübe.Visibility = Visibility.Hidden;
+            flappyBird.Visibility = Visibility.Visible;
+            scoreText.Visibility = Visibility.Visible;
+
+        }
+
+        private void eredmenyekButton_Click(object sender, RoutedEventArgs e)
+        {
+            szintekButton.Visibility = Visibility.Hidden;
+            eredmenyekButton.Visibility = Visibility.Hidden;
+            VisszaAFőmenübe.Visibility = Visibility.Visible;
+            ScoreTextblock.Visibility = Visibility.Visible;
+            flappyBird.Visibility = Visibility.Hidden;
+            scoreText.Visibility = Visibility.Hidden;
         }
     }
 }
