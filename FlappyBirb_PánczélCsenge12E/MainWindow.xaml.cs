@@ -16,14 +16,14 @@ namespace FlappyBirb_PánczélCsenge12E
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-       
+        int gravity = 8;
 
         private void szintekButton_Click(object sender, RoutedEventArgs e)
         {
@@ -46,7 +46,7 @@ namespace FlappyBirb_PánczélCsenge12E
             esosButton.Visibility = Visibility.Hidden;
             kodosButton.Visibility = Visibility.Hidden;
             VisszaMainButton.Visibility = Visibility.Hidden;
-            ScoreTextblock.Visibility = Visibility. Hidden;
+            ScoreTextblock.Visibility = Visibility.Hidden;
             VisszaAFőmenübe.Visibility = Visibility.Hidden;
             flappyBird.Visibility = Visibility.Visible;
             scoreText.Visibility = Visibility.Visible;
@@ -75,6 +75,22 @@ namespace FlappyBirb_PánczélCsenge12E
             ScoreTextblock.Visibility = Visibility.Visible;
             flappyBird.Visibility = Visibility.Hidden;
             scoreText.Visibility = Visibility.Hidden;
+        }
+
+        private void Canvas_KeyisDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                flappyBird.RenderTransform = new RotateTransform(-20, flappyBird.Width / 2, flappyBird.Height / 2);
+                gravity = -8;
+            }
+            
+        }
+
+        private void Canvas_KeyisUp(object sender, KeyEventArgs e)
+        {
+            flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
+            gravity = 8;
         }
     }
 }
